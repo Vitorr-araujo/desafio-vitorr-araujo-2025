@@ -44,7 +44,22 @@ class AbrigoAnimais {
     const listaBrinquedoP1 = brinquedosPessoa1.split(',');
     const listaBrinquedoP2 = brinquedosPessoa2.split(',');    
     const listaAnimaisConsiderados = ordemAnimais.split(',');
-  
+    
+    for (const nomeAnimal of listaAnimaisConsiderados){
+      const animalExiste = this.animais.find(animaldaLista =>{
+        return animaldaLista.nome === nomeAnimal;
+      });
+      
+      if (animalExiste.nome === undefined){
+        return { erro : 'Animal inválido' };
+      }
+    }
+
+
+
+
+
+    
   }
 }
 
