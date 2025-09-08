@@ -55,12 +55,23 @@ class AbrigoAnimais {
       }
     }
 
-
-
-
-
-    
   }
+
+
+
+  _verificasequencia (brinquedosAnimal, brinquedosPessoa) {
+    let marcador = 0;
+    
+    for (const brinquedoDaPessoa of brinquedosPessoa){
+      if (brinquedoDaPessoa === brinquedosAnimal[marcador]){
+        marcador++;
+      }
+    }
+    return marcador === brinquedosAnimal.length;
+  }
+
+
+  
 }
 
 export { AbrigoAnimais as AbrigoAnimais };
