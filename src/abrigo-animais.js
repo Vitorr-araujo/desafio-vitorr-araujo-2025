@@ -1,12 +1,12 @@
 class AbrigoAnimais {
   constructor() {
     this.animais = [
-      { nome: 'Rex', especie: 'cão', brinquedos: ['RATO', 'BOLA']}
-      { nome: 'Mimi', especie: 'gato', brinquedos: ['BOLA','LASER']}
-      { nome: 'Fofo', especie: 'gato', brinquedos: ['BOLA','RATO','LASER']}
-      { nome: 'Zero', especie: 'gato', brinquedos: ['RATO','BOLA']}
-      { nome: 'Bola', especie: 'cão', brinquedos: ['CAIXA','NOVELO']}
-      { nome: 'Bebe', especie: 'cão', brinquedos: ['LASER','RATO','BOLA']}
+      { nome: 'Rex', especie: 'cão', brinquedos: ['RATO', 'BOLA']},
+      { nome: 'Mimi', especie: 'gato', brinquedos: ['BOLA','LASER']},
+      { nome: 'Fofo', especie: 'gato', brinquedos: ['BOLA','RATO','LASER']},
+      { nome: 'Zero', especie: 'gato', brinquedos: ['RATO','BOLA']},
+      { nome: 'Bola', especie: 'cão', brinquedos: ['CAIXA','NOVELO']},
+      { nome: 'Bebe', especie: 'cão', brinquedos: ['LASER','RATO','BOLA']},
       { nome: 'Loco', especie: 'jabuti', brinquedos: ['SKATE','RATO']}
     ];
   }
@@ -80,7 +80,7 @@ class AbrigoAnimais {
     for (const decisao of descisoesIniciais) {
       if (decisao.nome === 'Loco'){
         if (decisao.destino === 'pessoa 1' && animaisPessoa1 < 2){
-          decisao.destino = 'anpmbrigo';
+          decisao.destino = 'abrigo';
         }
         if (decisao.destino === 'pessoa 2' && animaisPessoa2 < 2){
           decisao.destino = 'abrigo';
