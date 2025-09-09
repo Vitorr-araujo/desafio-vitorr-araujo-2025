@@ -37,16 +37,16 @@ class AbrigoAnimais {
     
     let descisoesIniciais = [];
     for (const nomeAnimal of listaAnimaisConsiderados) {
-      const animail = this.animais.find(a => a.nome === nomeAnimal);
+      const animal = this.animais.find(a => a.nome === nomeAnimal);
       let pessoa1Apta = false;
       let pessoa2Apta = false;
-      
-      if (animal.nome === 'Loco'){
+
+      if(animal.nome === 'Loco'){
         pessoa1Apta = animal.brinquedos.every(b => listaBrinquedoP1.includes(b));
         pessoa2Apta = animal.brinquedos.every(b => listaBrinquedoP2.includes(b));
       } else {
-      pessoa1Apta = this._verificasequencia(animal.brinquedos, listaBrinquedoP1);
-      pessoa2Apta = this._verificasequencia(animal.brinquedos, listaBrinquedoP2);  
+        pessoa1Apta = this._verificasequencia(animal.brinquedos, listaBrinquedoP1);
+        pessoa2Apta = this._verificasequencia(animal.brinquedos, listaBrinquedoP2);  
       }
 
       let destino;
@@ -97,8 +97,8 @@ class AbrigoAnimais {
     }
 
     const listaFinal = descisoesIniciais
-      .sort ((a, b) => a.nome.localCompare(b.nome))
-      .map (d => '${d.nome} - ${d.destino}');
+      .sort ((a, b) => a.nome.localeCompare(b.nome))
+      .map (d => `${d.nome} - ${d.destino}`);
     return { lista: listaFinal };
   }
 }
